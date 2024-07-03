@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="idInstance" name="idInstance" value="7103953700"><br>
+        <input type="password" placeholder="ApiTokenInstance" name="ApiTokenInstance" value="b209784041cd48d5a9acfaa5f1d76106111bd3d9a676471bb6"><br>
+        <button type="submit" formaction="/getSettings" formmethod="get">getSettings</button><br>
+        <button type="submit" formaction="/getStateInstance" formmethod="get">getStateInstance</button><br>
+        <input type="text" placeholder="chat id" name="chatId"><br>
+        <textarea name="message" cols="30" rows="10"></textarea><br>
+        <button type="submit" formaction="/sendMessage" formmethod="post">sendMessage</button><br>
+        <input type="text" placeholder="chat id" name="chatId2"><br>
+        <input type="text" name="fileUrl" placeholder="fileByUrl"><br>
+        <button type="submit" formaction="/sendFileByUrl" formmethod="post">sendFileByUrl</button><br>
+        <h4>Ответ:</h4>
+    </form>
+    <textarea name="result"  cols="50" rows="40" readonly>
+    {{ if .result }}
+    {{ .result }}
+    {{ end }}
+    </textarea>
+</body>
+</html>
